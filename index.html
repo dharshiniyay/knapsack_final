@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unbounded Knapsack Visualization</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Local vis-network css not needed -->
+    <script type="text/javascript" src="vis-network.min.js"></script>
+  </head>
+  <body>
+    <h1>Unbounded Knapsack Subproblem Graph for P(14)</h1>
+    <p>Items: (w=4, p=7), (w=6, p=6), (w=8, p=9)</p>
+
+    <div class="main-container">
+      <div class="left-container">
+        <div class="controls">
+          <button id="prev">Previous Step</button>
+          <button id="next">Next Step</button>
+          <button id="reset">Reset</button>
+          <span id="step-info">Step: 0 - Initial Graph</span>
+        </div>
+        <div id="graph-container">
+          <div id="network"></div>
+        </div>
+
+        <div id="info">
+          <p>Total Paths Found: <span id="total-paths">0</span></p>
+          <p>Optimal Path Profit: <span id="optimal-profit">0</span></p>
+          <p>Optimal Path Items: <span id="optimal-items"></span></p>
+        </div>
+      </div>
+
+      <div class="right-container">
+        <div id="table-container">
+          <h2>Paths Explored</h2>
+          <table id="pathsTable">
+            <thead>
+              <tr>
+                <th>Path (Items Added: Profit)</th>
+                <th>Total Weight</th>
+                <th>Total Profit</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Path rows will be added here by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
