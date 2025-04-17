@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function createGraph() {
     // Add all nodes first
     nodes.add([
-      { id: 0, label: "P(14)", capacity: 14, level: 0 },
+      { id: 0, label: "P(14)", capacity: 15, level: 0 },
       { id: 1, label: "P(10)", capacity: 10, level: 1 },
       { id: 2, label: "P(8)", capacity: 8, level: 1 },
       { id: 3, label: "P(6)", capacity: 6, level: 1 },
