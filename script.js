@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function createGraph() {
     // Add all nodes first
     nodes.add([
-      { id: 0, label: "P(14)", capacity: 15, level: 0 },
+      { id: 0, label: "P(14)", capacity: 14, level: 0 },
       { id: 1, label: "P(10)", capacity: 10, level: 1 },
       { id: 2, label: "P(8)", capacity: 8, level: 1 },
       { id: 3, label: "P(6)", capacity: 6, level: 1 },
@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
       { id: 13, label: "P(2)", capacity: 2, level: 3 },
       { id: 15, label: "P(-2)", capacity: -2, level: 3 },
       { id: 16, label: "P(2)", capacity: 2, level: 3 },
-      { id: 17, label: "P(-6)", capacity: -6, level: 4 },
-      { id: 18, label: "P(-4)", capacity: -4, level: 4 },
-      { id: 20, label: "P(-4)", capacity: -4, level: 4 },
+      // { id: 17, label: "P(-6)", capacity: -6, level: 4 },
+      // { id: 18, label: "P(-4)", capacity: -4, level: 4 },
+      // { id: 20, label: "P(-4)", capacity: -4, level: 4 },
     ]);
 
     // Add all edges with profits
@@ -73,30 +73,31 @@ document.addEventListener("DOMContentLoaded", () => {
       { id: 16, from: 6, to: 16, label: "+7", profit: 7, weight: 4, itemId: 0 }, // To P(2) with item 0
 
       // From P(6) (another node) to children
-      { id: 17, from: 8, to: 17, label: "+9", profit: 9, weight: 8, itemId: 2 }, // To P(-2) with item 2
-      { id: 18, from: 8, to: 18, label: "+6", profit: 6, weight: 6, itemId: 1 }, // To P(-4) with item 1
+      // { id: 17, from: 8, to: 17, label: "+9", profit: 9, weight: 8, itemId: 2 }, // To P(-2) with item 2
+      // { id: 18, from: 8, to: 18, label: "+6", profit: 6, weight: 6, itemId: 1 }, // To P(-4) with item 1
 
       // From P(2) to children
 
       // From P(2) (ID 16) to children - more 4th level
-      {
-        id: 21,
-        from: 16,
-        to: 17,
-        label: "+7",
-        profit: 7,
-        weight: 4,
-        itemId: 0,
-      }, // To P(-2) with item 0
-      {
-        id: 22,
-        from: 16,
-        to: 20,
-        label: "+6",
-        profit: 6,
-        weight: 6,
-        itemId: 1,
-      }, // To P(-2) with item 1
+      // {
+      //   id: 21,
+      //   from: 16,
+      //   to: 17,
+      //   label: "+7",
+      //   profit: 7,
+      //   weight: 4,
+      //   itemId: 0,
+      // },
+      // To P(-2) with item 0
+      // {
+      //   id: 22,
+      //   from: 16,
+      //   to: 20,
+      //   label: "+6",
+      //   profit: 6,
+      //   weight: 6,
+      //   itemId: 1,
+      // }, // To P(-2) with item 1
     ]);
   }
 
